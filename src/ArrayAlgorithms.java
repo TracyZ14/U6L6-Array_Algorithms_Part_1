@@ -397,18 +397,7 @@ public class ArrayAlgorithms
 
     public static void shiftLeftModify(int[] numList)
     {
-        int[] shiftedLeft = new int[numList.length];
-        for(int i = 0; i < numList.length; i++)
-        {
-            if(i == (numList.length - 1))
-            {
-                shiftedLeft[i] = numList[0];
-            }
-            else
-            {
-                shiftedLeft[i] = numList[i + 1];
-            }
-        }
+        int[] shiftedLeft = shiftLeft(numList);
         for(int i = 0; i < numList.length; i++)
         {
             numList[i] = shiftedLeft[i];
